@@ -17,6 +17,10 @@ sys.path.append(".")
 import RTC
 import OpenRTM_aist
 
+#Import to use GPIO
+import RPi.GPIO as GPIO
+import spidev
+
 
 # Import Service implementation class
 # <rtc-template block="service_impl">
@@ -49,13 +53,31 @@ led_spec = ["implementation_id", "LED",
 		 ""]
 # </rtc-template>
 
+
+#add mycodes
+
+GPIO.setwarnings(False)
+GPIO.setmode( GPIO.BCM)
+GPIO.setup( 4, GPIO.OUT)
+
+LIGHT = GPIO.PWM(4, 100)
+
+LIGHT.start(0)
+
+def arduino_map(x,in_min, in_max, out_min, out_max):
+	return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
+
+
+
+
+
 ##
 # @class LED
 # @brief ModuleDescription
 # 
 # FaBoLEDユニットを点灯させるRTC。真理値を用いて点灯、消灯のみで制御する方法もある
-	が、ここでは照度制御なども考え、データをFloatで取得し汎用的に点灯させられるRTCを
-	考慮する
+#	が、ここでは照度制御なども考え、データをFloatで取得し汎用的に点灯させられるRTCを
+#	考慮する
 # 
 # InPortよりLED照度情報(数値)を取得し、それに応じた照度でLEDを点灯させる。
 # 
@@ -90,8 +112,6 @@ class LED(OpenRTM_aist.DataFlowComponentBase):
 		"""
 		self._LEDPIN = [4]
 		
-		# </rtc-template>
-
 
 		 
 	##
@@ -198,7 +218,12 @@ class LED(OpenRTM_aist.DataFlowComponentBase):
 		#
 		#
 	def onExecute(self, ec_id):
-	
+		if(self._SignalPortIn.isNew()):
+			self._d_signal = self._SignalPortIn.read()
+			value = arduino_map(self._d_signal.data, 0, 1023,0, 100)		
+			LIGHT.ChangeDutyCycle(value)
+			
+		time.sleep(0.01)	
 		return RTC.RTC_OK
 	
 	#	##
