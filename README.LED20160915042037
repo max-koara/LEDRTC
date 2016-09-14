@@ -11,7 +11,7 @@
 #   --module-category=Category --module-comp-type=STATIC 
 #   --module-act-type=PERIODIC --module-max-inst=1 
 #   --config=LEDPIN:short:4 
-#   --inport=SignalPort:RTC::TimedShort 
+#   --inport=SignalPort:RTC::TimedFloat 
 
 
 ======================================================================
@@ -77,11 +77,11 @@ In/Out:      InPortよりLED照度情報(数値)を取得し、それに応じ�
 	Description: LED点灯を制御する信号をInPortより取得し、LEDを制御す
 	             る
 	PortType: 
-	DataType:    RTC::TimedShort
+	DataType:    RTC::TimedFloat
 	MaxOut: 
 	[Data Elements]
 		Name:
-		Type:            Short
+		Type:            TimedFloat
 		Number:          
 		Semantics:       
 		Unit:            

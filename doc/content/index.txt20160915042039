@@ -117,7 +117,7 @@ The ports provided by the component are described below:
 =============== =========== ============================== =======
 Name            Type        Data type                      Purpose
 =============== =========== ============================== =======
-SignalPort      InPort      RTC::TimedShort                LED点灯を制御する信号をInPortより取得し、LEDを制御する
+SignalPort      InPort      RTC::TimedFloat                LED点灯を制御する信号をInPortより取得し、LEDを制御する
 =============== =========== ============================== =======
 
 Examples

@@ -26,8 +26,8 @@
             <rtcExt:Properties rtcExt:value="text" rtcExt:name="__widget__"/>
         </rtc:Configuration>
     </rtc:ConfigurationSet>
-    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="LEFT" rtcExt:variableName="signal" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedShort" rtc:name="SignalPort" rtc:portType="DataInPort">
-        <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="Short" rtcDoc:description="LED点灯を制御する信号をInPortより取得し、LEDを制御する"/>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="LEFT" rtcExt:variableName="signal" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedFloat" rtc:name="SignalPort" rtc:portType="DataInPort">
+        <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="TimedFloat" rtcDoc:description="LED点灯を制御する信号をInPortより取得し、LEDを制御する"/>
     </rtc:DataPorts>
     <rtc:Language xsi:type="rtcExt:language_ext" rtc:kind="Python"/>
 </rtc:RtcProfile>
