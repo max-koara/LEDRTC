@@ -19,7 +19,6 @@ import OpenRTM_aist
 
 #Import to use GPIO
 import RPi.GPIO as GPIO
-import spidev
 
 
 # Import Service implementation class
@@ -66,9 +65,6 @@ LIGHT.start(0)
 
 def arduino_map(x,in_min, in_max, out_min, out_max):
 	return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
-
-
-
 
 
 ##

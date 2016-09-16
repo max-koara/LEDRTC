@@ -1,0 +1,14 @@
+2016-09-16 16:31:34,488 manager INFO 1.1.0
+2016-09-16 16:31:34,489 manager INFO Copyright (C) 2003-2010
+2016-09-16 16:31:34,490 manager INFO   Noriaki Ando
+2016-09-16 16:31:34,491 manager INFO   Intelligent Systems Research Institute, AIST
+2016-09-16 16:31:34,491 manager INFO Manager starting.
+2016-09-16 16:31:34,492 manager INFO Starting local logging.
+2016-09-16 16:31:34,508 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2016-09-16 16:31:34,572 ManagerServant INFO Master manager not found
+2016-09-16 16:31:34,577 LocalServiceAdmin INFO All the local services are enabled.
+2016-09-16 16:31:34,626 manager INFO Component type conf file: LED.conf loaded.
+2016-09-16 16:31:34,654 ec_base INFO setRate(1000000.000000) done
+2016-09-16 16:31:34,657 ec_base INFO setRate(1000.000000) done
+2016-09-16 16:31:34,662 rtobject INFO 1 execution context was created.
+2016-09-16 16:31:34,677 rtobject INFO Initial active configuration set is default.
