@@ -1,0 +1,21 @@
+2016-09-16 18:13:35,818 manager INFO 1.1.0
+2016-09-16 18:13:35,820 manager INFO Copyright (C) 2003-2010
+2016-09-16 18:13:35,820 manager INFO   Noriaki Ando
+2016-09-16 18:13:35,821 manager INFO   Intelligent Systems Research Institute, AIST
+2016-09-16 18:13:35,822 manager INFO Manager starting.
+2016-09-16 18:13:35,822 manager INFO Starting local logging.
+2016-09-16 18:13:35,839 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2016-09-16 18:13:35,899 ManagerServant INFO Master manager not found
+2016-09-16 18:13:35,903 LocalServiceAdmin INFO All the local services are enabled.
+2016-09-16 18:13:35,949 manager INFO Component type conf file: LED.conf loaded.
+2016-09-16 18:13:35,979 ec_base INFO setRate(1000000.000000) done
+2016-09-16 18:13:35,981 ec_base INFO setRate(1000.000000) done
+2016-09-16 18:13:35,987 rtobject INFO 1 execution context was created.
+2016-09-16 18:13:36,002 rtobject INFO Initial active configuration set is default.
+2016-09-16 18:13:51,645 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2016-09-16 18:13:51,646 SdoServiceAdmin ERROR type  already exists.
+2016-09-16 18:13:51,654 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2016-09-16 18:13:51,655 SdoServiceAdmin ERROR type aebedaea-a975-4144-8621-eff377f95153 already exists.
+2016-09-16 18:20:55,657 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2016-09-16 18:20:55,664 ec_worker WARNING ExecutionContext is already stopped.
+2016-09-16 18:20:55,665 ec_base ERROR Invoking on_shutdown() for each RTC failed.

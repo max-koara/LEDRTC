@@ -61,7 +61,6 @@ GPIO.setup( 4, GPIO.OUT)
 
 LIGHT = GPIO.PWM(4, 100)
 
-LIGHT.start(0)
 
 def arduino_map(x,in_min, in_max, out_min, out_max):
 	return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
@@ -143,9 +142,10 @@ class LED(OpenRTM_aist.DataFlowComponentBase):
 	#	# @return RTC::ReturnCode_t
 	#
 	#	# 
-	#def onFinalize(self):
-	#
-	#	return RTC.RTC_OK
+	def onFinalize(self):
+		GPIO.cleanup()
+		print"Finish GPIO cleanup"
+		return RTC.RTC_OK
 	
 		##
 		#
@@ -185,9 +185,11 @@ class LED(OpenRTM_aist.DataFlowComponentBase):
 	#	# @return RTC::ReturnCode_t
 	#	#
 	#	#
-	#def onActivated(self, ec_id):
-	#
-	#	return RTC.RTC_OK
+	def onActivated(self, ec_id):
+		
+		LIGHT.start(0)
+		print"LED Start"	
+		return RTC.RTC_OK
 	
 	#	##
 	#	#
@@ -199,9 +201,10 @@ class LED(OpenRTM_aist.DataFlowComponentBase):
 	#	# @return RTC::ReturnCode_t
 	#	#
 	#	#
-	#def onDeactivated(self, ec_id):
-	#
-	#	return RTC.RTC_OK
+	def onDeactivated(self, ec_id):
+		LIGHT.stop()
+		print"LED STOP"	
+		return RTC.RTC_OK
 	
 		##
 		#
